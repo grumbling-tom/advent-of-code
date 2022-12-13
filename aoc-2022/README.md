@@ -1,22 +1,24 @@
 # aoc-2022
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library housing solutions for the 2022 Advent of Code challenge.
 
-## Usage
+## Note on VSCode usage
 
-FIXME
+The [Calva](https://calva.io/paredit/#editing) default keyboard bindings for barfing and slurping forwards clash with `cursorWordPartLeft` and `cursorWordPartRight`, respectively.
 
-## License
+As such, an alternative keyboard shortcut can be used by replacing the [settings.json](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization) file with the following:
 
-Copyright © 2022 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+```json
+[
+    {
+        "key": "ctrl+shift+right",
+        "command": "paredit.slurpSexpForward",
+        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "paredit.barfSexpForward",
+        "when": "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"
+    }
+]
+```
