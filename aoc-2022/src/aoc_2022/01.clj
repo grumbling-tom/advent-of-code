@@ -27,8 +27,8 @@
        (map #(reduce + %))
        (apply max)))
 
-(defn main-
-  "Performs the tas described by Advent of Code day 1
+(defn -main
+  "Performs the task described by Advent of Code day 1
    https://adventofcode.com/2022/day/1"
   []
   (max-calories (txt->calories "resources/01.calories.txt")))
