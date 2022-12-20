@@ -50,7 +50,10 @@
          :files ('14848514 b.txt' '8504156 c.dat')},
     'a' {:dirs ('e'), 
          :files ('29116 f' '2557 g' '62596 h.lst')},
-    ...}"
+    ...}
+   
+   ;; TODO: Check there's no duplicate directory names in the input
+   "
   [txt]
   (let [pattern #"\$\scd\s([a-z].*|\/)\n"
         dirs-names (map last (re-seq pattern txt))
