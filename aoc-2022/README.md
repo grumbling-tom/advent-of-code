@@ -2,6 +2,14 @@
 
 A Clojure library housing solutions for the 2022 Advent of Code challenge.
 
+## Installation
+
+The project is managed using [Leinigen](https://leiningen.org/). To install dependencies, use:
+
+```bash
+lein deps
+```
+
 ## REPL development
 
 Development is much improved in the REPL. To change into the desired namespace, jack into an nREPL and execute the following:
